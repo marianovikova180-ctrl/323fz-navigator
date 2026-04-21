@@ -3,115 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <title>323-ФЗ Навигатор</title>
+
 <style>
-body{margin:0;font-family:system-ui}
-.wrap{display:flex;height:100vh}
-#map{
-width:40%;
-padding:20px;
-border-right:1px solid #ccc;
-overflow:auto
+body {
+  margin: 0;
+  font-family: system-ui;
 }
-#law{
-width:60%;
-padding:20px;
-overflow:auto
+
+.wrap {
+  display: flex;
+  height: 100vh;
 }
-.node{
-display:block;
-padding:10px;
-margin:8px;
-border:1px solid #bbb;
-border-radius:10px;
-cursor:pointer
+
+/* левая панель */
+#map {
+  width: 40%;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow: auto;
+}
+
+/* правая панель */
+#law {
+  width: 60%;
+  padding: 20px;
+  overflow: auto;
+}
+
+.node {
+  display: block;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  cursor: pointer;
 }
 </style>
+
 </head>
 <body>
 
 <div class="wrap">
 
-<img src="323-Br-Flow-2026-04-21-081015.svg">
-<h2> mind map</h2>
+  <!-- ЛЕВАЯ ПАНЕЛЬ -->
+  <div id="map">
 
-<div class="node" onclick="jump('st18')">
-Право на охрану здоровья
-</div>
+    <img src="323-Br-Flow-2026-04-21-081015.svg" alt="mind map" style="max-width:100%; height:auto;">
+    <h2>Mind map</h2>
 
-<div class="node" onclick="jump('st19')">
-Право на медпомощь
-</div>
+    <div class="node" onclick="jump('st18')">Право на охрану здоровья</div>
+    <div class="node" onclick="jump('st19')">Право на медпомощь</div>
+    <div class="node" onclick="jump('st20-ch1')">Информированное согласие</div>
+    <div class="node" onclick="jump('st20-ch7')">Отказ от вмешательства</div>
+    <div class="node" onclick="jump('st21')">Выбор врача</div>
+    <div class="node" onclick="jump('st47')">Трансплантация</div>
+    <div class="node" onclick="jump('st55')">ВРТ</div>
 
-<div class="node" onclick="jump('st20-ch1')">
-Информированное согласие
-</div>
+  </div>
 
-<div class="node" onclick="jump('st20-ch7')">
-Отказ от вмешательства
-</div>
+  <!-- ПРАВАЯ ПАНЕЛЬ -->
+  <div id="law">
 
-<div class="node" onclick="jump('st21')">
-Выбор врача
-</div>
+    <h2 id="st18">Статья 18</h2>
+    <p>Право на охрану здоровья...</p>
 
-<div class="node" onclick="jump('st47')">
-Трансплантация
-</div>
+    <h2 id="st19">Статья 19</h2>
+    <p>Право на медицинскую помощь...</p>
 
-<div class="node" onclick="jump('st55')">
-ВРТ
-</div>
+    <h2 id="st20">Статья 20</h2>
 
-</div>
+    <h3 id="st20-ch1">Часть 1</h3>
+    <p>Информированное добровольное согласие...</p>
 
-<div id="law">
+    <h3 id="st20-ch7">Часть 7</h3>
+    <p>Отказ от медицинского вмешательства...</p>
 
-<h2 id="st18">Статья 18</h2>
-<p>
-Право на охрану здоровья...
-</p>
+    <h2 id="st21">Статья 21</h2>
+    <p>Выбор врача и медицинской организации...</p>
 
-<h2 id="st19">Статья 19</h2>
-<p>
-Право на медицинскую помощь...
-</p>
+    <h2 id="st47">Статья 47</h2>
+    <p>Трансплантация...</p>
 
-<h2 id="st20">Статья 20</h2>
+    <h2 id="st55">Статья 55</h2>
+    <p>Вспомогательные репродуктивные технологии...</p>
 
-<h3 id="st20-ch1">Часть 1</h3>
-<p>
-Информированное добровольное согласие...
-</p>
-
-<h3 id="st20-ch7">Часть 7</h3>
-<p>
-Отказ от медицинского вмешательства...
-</p>
-
-<h2 id="st21">Статья 21</h2>
-<p>
-Выбор врача и медицинской организации...
-</p>
-
-<h2 id="st47">Статья 47</h2>
-<p>
-Трансплантация...
-</p>
-
-<h2 id="st55">Статья 55</h2>
-<p>
-Вспомогательные репродуктивные технологии...
-</p>
-
-</div>
+  </div>
 
 </div>
 
 <script>
-function jump(id){
-document.getElementById(id).scrollIntoView({
-behavior:'smooth'
-});
+function jump(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 </script>
 
