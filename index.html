@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>323-ФЗ Навигатор</title>
+<style>
+body{margin:0;font-family:system-ui}
+.wrap{display:flex;height:100vh}
+#map{
+width:40%;
+padding:20px;
+border-right:1px solid #ccc;
+overflow:auto
+}
+#law{
+width:60%;
+padding:20px;
+overflow:auto
+}
+.node{
+display:block;
+padding:10px;
+margin:8px;
+border:1px solid #bbb;
+border-radius:10px;
+cursor:pointer
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<div id="323 Br Flow-2026-04-21-081015.svg">
+<h2>Mind Map</h2>
+
+<div class="node" onclick="jump('st18')">
+Право на охрану здоровья
+</div>
+
+<div class="node" onclick="jump('st19')">
+Право на медпомощь
+</div>
+
+<div class="node" onclick="jump('st20-ch1')">
+Информированное согласие
+</div>
+
+<div class="node" onclick="jump('st20-ch7')">
+Отказ от вмешательства
+</div>
+
+<div class="node" onclick="jump('st21')">
+Выбор врача
+</div>
+
+<div class="node" onclick="jump('st47')">
+Трансплантация
+</div>
+
+<div class="node" onclick="jump('st55')">
+ВРТ
+</div>
+
+</div>
+
+<div id="law">
+
+<h2 id="st18">Статья 18</h2>
+<p>
+Право на охрану здоровья...
+</p>
+
+<h2 id="st19">Статья 19</h2>
+<p>
+Право на медицинскую помощь...
+</p>
+
+<h2 id="st20">Статья 20</h2>
+
+<h3 id="st20-ch1">Часть 1</h3>
+<p>
+Информированное добровольное согласие...
+</p>
+
+<h3 id="st20-ch7">Часть 7</h3>
+<p>
+Отказ от медицинского вмешательства...
+</p>
+
+<h2 id="st21">Статья 21</h2>
+<p>
+Выбор врача и медицинской организации...
+</p>
+
+<h2 id="st47">Статья 47</h2>
+<p>
+Трансплантация...
+</p>
+
+<h2 id="st55">Статья 55</h2>
+<p>
+Вспомогательные репродуктивные технологии...
+</p>
+
+</div>
+
+</div>
+
+<script>
+function jump(id){
+document.getElementById(id).scrollIntoView({
+behavior:'smooth'
+});
+}
+</script>
+
+</body>
+</html>
